@@ -154,6 +154,78 @@ testCases.studioPanel = {
   element: <StudioPanel />
 };
 
+testCases.scrollable = {
+  description: 'scrollable',
+  element: (
+    <PopoverTrigger
+      content={
+        <div className="flex-parent flex-parent--center-cross flex-parent--column hmin120 hmax360 scroll-styled">
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+          <div className="flex-child">
+            <input className="input" placeholder="eh?" />
+          </div>
+          <div className="flex-child">
+            <button className="btn ml6">Submit</button>
+          </div>
+        </div>
+      }
+    />
+  )
+};
+
 testCases.nestedPopovers = {
   description: 'nested popovers',
   element: (

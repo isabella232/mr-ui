@@ -157,6 +157,7 @@ class PopoverPositioner extends React.PureComponent {
   };
 
   render() {
+    console.log('sup bitch');
     const basicStyle = {
       position: 'absolute',
       zIndex: this.props.zIndex,
