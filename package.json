@@ -45,7 +45,7 @@
     "classnames": "^2.2.6",
     "clipboard": "^2.0.0",
     "debounce": "^1.1.0",
-    "focus-trap": "^3.0.0",
+    "focus-trap": "^5.1.0",
     "hoverintent": "^2.0.0",
     "os-key": "^1.0.0",
     "prefix": "^1.0.0",
