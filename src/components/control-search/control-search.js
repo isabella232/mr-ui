@@ -108,15 +108,15 @@ export default class ControlSearch extends React.Component {
       'data-test': `${id}-select`
     };
 
-    const selectStyles = {
-      option: provided => ({
-        ...provided
-      }),
-      control: () => ({
-        // none of react-select's styles are passed to <Control />
-        width: 200
-      })
-    };
+    // const selectStyles = {
+    //   option: provided => ({
+    //     ...provided
+    //   }),
+    //   control: () => ({
+    //     // none of react-select's styles are passed to <Control />
+    //     width: 200
+    //   })
+    // };
 
     if (validationError) {
       selectProps['aria-invalid'] = true;
@@ -128,7 +128,9 @@ export default class ControlSearch extends React.Component {
         themeControlWrapper={themeControlWrapper}
         validationError={validationError}
       >
-        {<Select options={options} styles={selectStyles} />}
+        {/* {<Select options={options} styles={selectStyles} />} */}
+        {<Select options={options} width="200px" />}
+
         <div
           className={`control-text-container ${themeControlSelectContainer}`}
         >
