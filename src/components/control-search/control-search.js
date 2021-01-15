@@ -4,6 +4,12 @@ import Select from 'react-select';
 import ControlWrapper from '../control-wrapper';
 
 export default class ControlSearch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectValue: ''
+    };
+  }
   static propTypes = {
     /** An array of objects containing `label` `value` key value pairings to represent each option. An optional `disable` key can be provided to disable the selection of an indiviual `<option>`. If `value` is not present but an `options` array is provided containing the same `label` `value` key value pairings, options will be grouped within a `<optgroup>` element as defined by `label` child key. Note that each `label` value must be unique. */
     options: PropTypes.arrayOf(
@@ -72,8 +78,14 @@ export default class ControlSearch extends React.Component {
     themeLabel: PropTypes.string
   };
 
-  onChange = e => {
-    return this.props.onChange(e.target.value, this.props.id);
+  onChange = () => {
+    return this.state.selectValue;
+  };
+
+  updateValue = newValue => {
+    this.setState({
+      selectValue: newValue
+    });
   };
 
   static defaultProps = {
@@ -88,7 +100,6 @@ export default class ControlSearch extends React.Component {
     const {
       id,
       value,
-      label,
       options,
       optional,
       disabled,
@@ -115,6 +126,9 @@ export default class ControlSearch extends React.Component {
       container: () => ({
         // none of react-select's styles are passed to <Control />
         width: 200
+      }),
+      input: () => ({
+        font: 24
       })
     };
 
@@ -129,13 +143,18 @@ export default class ControlSearch extends React.Component {
         validationError={validationError}
       >
         {/* {<Select options={options} styles={selectStyles} />} */}
-        {<Select options={options} styles={selectStyles} />}
 
         <div
           className={`control-text-container ${themeControlSelectContainer}`}
         >
-          {console.log(themeControlSelect)}
-          {console.log(label)}
+          {
+            <Select
+              options={options}
+              styles={selectStyles}
+              value={this.state.selectValue}
+              onChange={this.updateValue}
+            />
+          }
         </div>
       </ControlWrapper>
     );
