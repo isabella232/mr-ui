@@ -78,9 +78,9 @@ export default class ControlSearch extends React.Component {
     themeLabel: PropTypes.string
   };
 
-  // onChange = () => {
-  //   return this.state.selectValue;
-  // };
+  onChange = () => {
+    return this.state.selectValue;
+  };
 
   updateValue = newValue => {
     this.props.onChange(newValue.value);
