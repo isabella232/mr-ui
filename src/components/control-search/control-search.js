@@ -83,7 +83,7 @@ export default class ControlSearch extends React.Component {
   // };
 
   updateValue = newValue => {
-    this.props.onChange(newValue);
+    this.props.onChange(newValue.value);
   };
 
   static defaultProps = {
