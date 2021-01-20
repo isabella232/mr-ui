@@ -153,7 +153,7 @@ export default class ControlSearch extends React.Component {
               styles={selectStyles}
               value={this.state.selectValue}
               onChange={this.updateValue}
-              defaultInputValue={defaultValue}
+              defaultValue={defaultValue}
             />
           }
         </div>
