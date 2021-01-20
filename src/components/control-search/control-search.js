@@ -7,7 +7,7 @@ export default class ControlSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectValue: ''
+      selectValue: 'hello'
     };
   }
   static propTypes = {
@@ -75,18 +75,16 @@ export default class ControlSearch extends React.Component {
     /** Assembly classes to apply to the control wrapper */
     themeControlWrapper: PropTypes.string,
     /** Assembly classes to apply to the label element */
-    themeLabel: PropTypes.string
+    themeLabel: PropTypes.string,
+    /** String that defines the default value selected */
+    defaultValue: PropTypes.string
   };
-
-  // onChange = () => {
-  //   return this.state.selectValue;
-  // };
 
   updateValue = newValue => {
     this.setState({
       selectValue: newValue
     });
-    this.props.onChange(newValue.value);
+    this.props.onChange(newValue);
   };
 
   static defaultProps = {
@@ -107,7 +105,8 @@ export default class ControlSearch extends React.Component {
       validationError,
       themeControlSelectContainer,
       themeControlSelect,
-      themeControlWrapper
+      themeControlWrapper,
+      defaultValue
     } = this.props;
 
     const selectProps = {
@@ -154,6 +153,7 @@ export default class ControlSearch extends React.Component {
               styles={selectStyles}
               value={this.state.selectValue}
               onChange={this.updateValue}
+              defaultInputValue={defaultValue}
             />
           }
         </div>
