@@ -120,15 +120,9 @@ export default class ControlSearch extends React.Component {
     };
 
     const selectStyles = {
-      option: provided => ({
-        ...provided
-      }),
       container: () => ({
         // none of react-select's styles are passed to <Control />
-        width: 200
-      }),
-      input: () => ({
-        font: 24
+        width: 300
       })
     };
 
@@ -142,8 +136,6 @@ export default class ControlSearch extends React.Component {
         themeControlWrapper={themeControlWrapper}
         validationError={validationError}
       >
-        {/* {<Select options={options} styles={selectStyles} />} */}
-
         <div
           className={`control-text-container ${themeControlSelectContainer}`}
         >
@@ -151,7 +143,6 @@ export default class ControlSearch extends React.Component {
             <Select
               options={options}
               styles={selectStyles}
-              value={this.state.selectValue}
               onChange={this.updateValue}
               defaultValue={defaultValue}
             />
